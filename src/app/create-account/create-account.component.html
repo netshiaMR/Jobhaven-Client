@@ -1,3 +1,25 @@
-<p>
-  create-account works!
-</p>
+<div>
+  <h2>Sign-Up</h2>
+  <form>
+ 
+    <div class="form-group">
+      <label for="name">Username</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Password</label>
+      <input type="text" class="form-control" id="age">
+    </div>
+ 
+    <div class="form-group">
+      <label for="nationality">Account Type</label>
+      <select class="form-control" id="nationality" 
+              required>
+        <option *ngFor="let nationality of nationalities" [value]="nationality">{{nationality}}</option>
+      </select>
+    </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
